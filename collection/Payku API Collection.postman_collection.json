@@ -6,10 +6,10 @@
 	},
 	"item": [
 		{
-			"name": "Transaccion",
+			"name": "Transacción",
 			"item": [
 				{
-					"name": "Crear Transaccion",
+					"name": "Crear transacción",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -59,7 +59,7 @@
 					"response": []
 				},
 				{
-					"name": "Obtener Multiples Pagos",
+					"name": "Obtener múltiples pagos",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -76,18 +76,18 @@
 					"response": []
 				},
 				{
-					"name": "Obtener Estado del Pago",
+					"name": "Obtener pago",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url_api}}/transaction/trxf71fc3e051596b4ed",
+							"raw": "{{url_api}}/transaction/{CODIGO-ID-IDENTIFICADOR}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"transaction",
-								"trxf71fc3e051596b4ed"
+								"{CODIGO-ID-IDENTIFICADOR}"
 							]
 						}
 					},
@@ -99,7 +99,7 @@
 			"name": "Marketplace",
 			"item": [
 				{
-					"name": "Crear Cliente",
+					"name": "Crear cliente",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -151,43 +151,43 @@
 					"response": []
 				},
 				{
-					"name": "Consultar Datos Cliente",
+					"name": "Consultar cliente",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url_api}}/maclient/macld0abcb2bb7f09aa5",
+							"raw": "{{url_api}}/maclient/{CODIGO-ID-IDENTIFICADOR}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"maclient",
-								"macld0abcb2bb7f09aa5"
+								"{CODIGO-ID-IDENTIFICADOR}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Eliminar Cliente",
+					"name": "Eliminar cliente",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url_api}}/maclient/macl186ea2a84659bd8f",
+							"raw": "{{url_api}}/maclient/{CODIGO-ID-IDENTIFICADOR}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"maclient",
-								"macl186ea2a84659bd8f"
+								"{CODIGO-ID-IDENTIFICADOR}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Crear Afiliacion",
+					"name": "Crear afiliación",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -238,43 +238,43 @@
 					"response": []
 				},
 				{
-					"name": "Consultar Afiliacion",
+					"name": "Consultar afiliación",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url_api}}/maaffiliation/maa4b0814c3d14778d0a",
+							"raw": "{{url_api}}/maaffiliation/{CODIGO-ID-IDENTIFICADOR}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"maaffiliation",
-								"maa4b0814c3d14778d0a"
+								"{CODIGO-ID-IDENTIFICADOR}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Eliminar Afiliacion",
+					"name": "Eliminar afiliación",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url_api}}/maaffiliation/maa4b0814c3d14778d0a",
+							"raw": "{{url_api}}/maaffiliation/{CODIGO-ID-IDENTIFICADOR}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"maaffiliation",
-								"maa4b0814c3d14778d0a"
+								"{CODIGO-ID-IDENTIFICADOR}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Crear Transac Marketplace",
+					"name": "Crear transac marketplace",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -330,7 +330,7 @@
 			"name": "Suscripcion",
 			"item": [
 				{
-					"name": "Insertar Datos de Cliente",
+					"name": "Crear cliente",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -404,7 +404,7 @@
 					"response": []
 				},
 				{
-					"name": "Consulta Datos Cliente",
+					"name": "Consultar cliente",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -415,20 +415,20 @@
 							}
 						],
 						"url": {
-							"raw": "{{url_api}}/suclient/cld6b4b9f7e24222a74f48",
+							"raw": "{{url_api}}/suclient/{CODIGO-ID-IDENTIFICADOR}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"suclient",
-								"cld6b4b9f7e24222a74f48"
+								"{CODIGO-ID-IDENTIFICADOR}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Actualizar Datos Cliente",
+					"name": "Actualizar cliente",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -490,20 +490,44 @@
 							}
 						},
 						"url": {
-							"raw": "{{url_api}}/suclient/cld6b4b9f7e24222a74f48",
+							"raw": "{{url_api}}/suclient/{CODIGO-ID-IDENTIFICADOR}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"suclient",
-								"cld6b4b9f7e24222a74f48"
+								"{CODIGO-ID-IDENTIFICADOR}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Obtener Todos los Clientes",
+					"name": "Eliminar cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_api}}/suclient/{CODIGO-ID-IDENTIFICADOR}",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suclient",
+								"{CODIGO-ID-IDENTIFICADOR}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener clientes",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -527,31 +551,7 @@
 					"response": []
 				},
 				{
-					"name": "Eliminar Cliente",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Sign",
-								"value": "{{firma}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{url_api}}/suclient/cl1ac9ceeb1507f2112b2f",
-							"host": [
-								"{{url_api}}"
-							],
-							"path": [
-								"suclient",
-								"cl1ac9ceeb1507f2112b2f"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Insertar Datos de Suscripcion",
+					"name": "Crear suscripción",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -619,7 +619,7 @@
 					"response": []
 				},
 				{
-					"name": "Obtener Todas las Suscripcion",
+					"name": "Obtener suscripciones",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -642,31 +642,7 @@
 					"response": []
 				},
 				{
-					"name": "Consultar Datos Suscripcion",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Sign",
-								"value": "821e3f8ebea2a679e0bdb67697b01075af6dec10003aac51f21a13ddf485f5b3",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{url_api}}/sususcription/sue2dd6dc922d9f174d73d",
-							"host": [
-								"{{url_api}}"
-							],
-							"path": [
-								"sususcription",
-								"sue2dd6dc922d9f174d73d"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Insertar Datos de Transaccion",
+					"name": "Crear transacción",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -736,7 +712,31 @@
 					"response": []
 				},
 				{
-					"name": "Eliminar Suscripcion",
+					"name": "Consultar suscripción",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "821e3f8ebea2a679e0bdb67697b01075af6dec10003aac51f21a13ddf485f5b3",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_api}}/sususcription/{CODIGO-ID-IDENTIFICADOR}",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"sususcription",
+								"{CODIGO-ID-IDENTIFICADOR}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Suscripción",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -747,20 +747,20 @@
 							}
 						],
 						"url": {
-							"raw": "{{url_api}}/sususcription/su09168ca9451fbee53c77",
+							"raw": "{{url_api}}/sususcription/{CODIGO-ID-IDENTIFICADOR}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"sususcription",
-								"su09168ca9451fbee53c77"
+								"{CODIGO-ID-IDENTIFICADOR}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Afiliar Tarjeta a Suscripcion",
+					"name": "Afiliar tarjeta",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -827,7 +827,7 @@
 					"response": []
 				},
 				{
-					"name": "Insertar Datos del Plan",
+					"name": "Crear plan",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -895,7 +895,7 @@
 					"response": []
 				},
 				{
-					"name": "Consulta Datos del Plan",
+					"name": "Consultar plan",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -918,20 +918,20 @@
 							}
 						},
 						"url": {
-							"raw": "{{url_api}}/suplan/pl29161fefa865f2e3962e",
+							"raw": "{{url_api}}/suplan/{CODIGO-ID-IDENTIFICADOR}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"suplan",
-								"pl29161fefa865f2e3962e"
+								"{CODIGO-ID-IDENTIFICADOR}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Consulta Todos los Planes",
+					"name": "Consultar planes",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -972,7 +972,7 @@
 			"name": "Suscripcion de Consumo",
 			"item": [
 				{
-					"name": "Insertar Datos de Cliente",
+					"name": "Crear cliente",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -1046,7 +1046,75 @@
 					"response": []
 				},
 				{
-					"name": "Insertar Datos de Suscripcion",
+					"name": "Crear plan",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/suplan');\r",
+									"\r",
+									"const body = {\r",
+									"  \"name\": \"Test Plan\",\r",
+									"  \"description\": \"Test Plan\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"description\": \"{{description}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/suplan",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suplan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear suscripción",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -1114,7 +1182,7 @@
 					"response": []
 				},
 				{
-					"name": "Insertar Datos de Transaccion",
+					"name": "Crear transacción",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -1182,74 +1250,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Insertar Datos del Plan",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									"pm.globals.clear()\r",
-									"const requestPath = encodeURIComponent('/api/suplan');\r",
-									"\r",
-									"const body = {\r",
-									"  \"name\": \"Test Plan\",\r",
-									"  \"description\": \"Test Plan\"\r",
-									"};\r",
-									" \r",
-									" const orderedData = {};\r",
-									" Object.keys(body).sort().forEach(function(key) {\r",
-									"    pm.globals.set(key, body[key]);\r",
-									"    orderedData[key] = body[key];\r",
-									"  });\r",
-									"\r",
-									"   const arrayConcat = Object.entries(orderedData).map(\r",
-									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
-									"  ).join(\"&\");\r",
-									"\r",
-									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
-									"\r",
-									"  const concat = requestPath + \"&\" + arrayChange;\r",
-									"\r",
-									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
-									"\r",
-									"  pm.globals.set(\"firma\", sign);\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Sign",
-								"value": "{{firma}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"description\": \"{{description}}\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url_api}}/suplan",
-							"host": [
-								"{{url_api}}"
-							],
-							"path": [
-								"suplan"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -1257,7 +1257,7 @@
 			"name": "Evento",
 			"item": [
 				{
-					"name": "Crear un Evento",
+					"name": "Crear evento",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -1314,18 +1314,18 @@
 					"response": []
 				},
 				{
-					"name": "Obtener Detalles del Evento",
+					"name": "Obtener evento",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url_api}}/event/90375",
+							"raw": "{{url_api}}/event/{CODIGO-ID}",
 							"host": [
 								"{{url_api}}"
 							],
 							"path": [
 								"event",
-								"90375"
+								"{CODIGO-ID}"
 							]
 						}
 					},

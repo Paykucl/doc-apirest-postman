@@ -1,0 +1,1367 @@
+{
+	"info": {
+		"_postman_id": "2855dea4-ec55-40fc-80a6-e0b7a625a004",
+		"name": "Payku API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transaccion",
+			"item": [
+				{
+					"name": "Crear Transaccion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"\r",
+									"const body = {\r",
+									"  \"email\": \"support@youwebsite.cl\",\r",
+									"  \"order\": 97745,\r",
+									"  \"subject\": \"subject\",\r",
+									"  \"amount\": 5000,\r",
+									"  \"payment\": 1,\r",
+									"  \"urlreturn\": \"https://youwebsite.com/urlreturn?orderClient=123\",\r",
+									"  \"urlnotify\": \"https://youwebsite.com/urlnotify?orderClient=123\"\r",
+									"};\r",
+									" \r",
+									" const body_str = JSON.stringify(body);\r",
+									" pm.globals.set('body_data', body_str);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{{body_data}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/transaction",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Multiples Pagos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/transaction",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Estado del Pago",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/transaction/trxf71fc3e051596b4ed",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"transaction",
+								"trxf71fc3e051596b4ed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Marketplace",
+			"item": [
+				{
+					"name": "Crear Cliente",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"\r",
+									"const body = {\r",
+									"  \"email\": \"support@website.cl\",\r",
+									"  \"name\": \"Token\",\r",
+									"  \"phone\": \"923122312\",\r",
+									"  \"bank\": {\r",
+									"    \"sbif\": \"0001\",\r",
+									"    \"type\": \"1\",\r",
+									"    \"num\": \"12312341234\",\r",
+									"    \"rut\": \"11111111-1\"\r",
+									"  }\r",
+									"};\r",
+									" \r",
+									" const body_str = JSON.stringify(body);\r",
+									" pm.globals.set('body_data', body_str);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{{body_data}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/maclient",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"maclient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Datos Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/maclient/macld0abcb2bb7f09aa5",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"maclient",
+								"macld0abcb2bb7f09aa5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/maclient/macl186ea2a84659bd8f",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"maclient",
+								"macl186ea2a84659bd8f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Afiliacion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"\r",
+									"const body = {\r",
+									"  \"name\": \"Maria\",\r",
+									"  \"percentage\": \"30\",\r",
+									"  \"affiliation\": [\r",
+									"    [\r",
+									"      \"macle1c5b133b40ea676\",\r",
+									"      \"70\"\r",
+									"    ]\r",
+									"  ]\r",
+									"};\r",
+									" \r",
+									" const body_str = JSON.stringify(body);\r",
+									" pm.globals.set('body_data', body_str);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{{body_data}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/maaffiliation",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"maaffiliation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Afiliacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/maaffiliation/maa4b0814c3d14778d0a",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"maaffiliation",
+								"maa4b0814c3d14778d0a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Afiliacion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/maaffiliation/maa4b0814c3d14778d0a",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"maaffiliation",
+								"maa4b0814c3d14778d0a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Transac Marketplace",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"\r",
+									"const body = {\r",
+									"  \"email\": \"support@website.cl\",\r",
+									"  \"order\": 95745,\r",
+									"  \"subject\": \"Tested\",\r",
+									"  \"amount\": 15000,\r",
+									"  \"payment\": 1,\r",
+									"  \"urlreturn\": \"https://youwebsite.com/urlreturn?orderClient=123\",\r",
+									"  \"urlnotify\": \"https://youwebsite.com/urlnotify?orderClient=123\",\r",
+									"  \"marketplace\": \"8b60fe8e8af70d1d270e27e349f7e96df61f4583e8f6297dc2d1fcfcbd269cc9\"\r",
+									"};\r",
+									" \r",
+									" const body_str = JSON.stringify(body);\r",
+									" pm.globals.set('body_data', body_str);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{{body_data}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/transaction",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Suscripcion",
+			"item": [
+				{
+					"name": "Insertar Datos de Cliente",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/suclient');\r",
+									"\r",
+									"const body = {\r",
+									"    \"email\": \"supportex@website.cl\",\r",
+									"    \"name\": \"Subject\",\r",
+									"    \"phone\": \"923122312\",\r",
+									"    \"address\": \"Moneda 101\",\r",
+									"    \"country\": \"Chile\",\r",
+									"    \"region\": \"Metropolitana\",\r",
+									"    \"city\": \"Santiago\",\r",
+									"    \"postal_code\": \"850000\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"name\": \"{{name}}\",\r\n  \"phone\": \"{{phone}}\",\r\n  \"address\": \"{{address}}\",\r\n  \"country\": \"{{country}}\",\r\n  \"region\": \"{{region}}\",\r\n  \"city\": \"{{city}}\",\r\n  \"postal_code\": \"{{postal_code}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/suclient",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suclient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta Datos Cliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_api}}/suclient/cld6b4b9f7e24222a74f48",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suclient",
+								"cld6b4b9f7e24222a74f48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Datos Cliente",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/suclient/cld6b4b9f7e24222a74f48');\r",
+									"\r",
+									"const body = {\r",
+									"    \"email\": \"supporte@website.cl\",\r",
+									"    \"name\": \"Subject True\",\r",
+									"    \"phone\": \"123456789\",\r",
+									"    \"address\": \"Moneda 707\",\r",
+									"    \"country\": \"Chile\",\r",
+									"    \"region\": \"Metropolitana\",\r",
+									"    \"city\": \"Santiago\",\r",
+									"    \"postal_code\": \"850000\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"name\": \"{{name}}\",\r\n  \"phone\": \"{{phone}}\",\r\n  \"address\": \"{{address}}\",\r\n  \"country\": \"{{country}}\",\r\n  \"region\": \"{{region}}\",\r\n  \"city\": \"{{city}}\",\r\n  \"postal_code\": \"{{postal_code}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/suclient/cld6b4b9f7e24222a74f48",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suclient",
+								"cld6b4b9f7e24222a74f48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Todos los Clientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_api}}/suclient/customers",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suclient",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_api}}/suclient/cl1ac9ceeb1507f2112b2f",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suclient",
+								"cl1ac9ceeb1507f2112b2f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar Datos de Suscripcion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/sususcription');\r",
+									"\r",
+									"const body = {\r",
+									"  \"plan\": \"pl691f84b91e9bae905a05\",\r",
+									"  \"client\": \"cld6b4b9f7e24222a74f48\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"plan\": \"{{plan}}\",\r\n  \"client\": \"{{client}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/sususcription",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"sususcription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Todas las Suscripcion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_api}}/sususcription",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"sususcription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Datos Suscripcion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "821e3f8ebea2a679e0bdb67697b01075af6dec10003aac51f21a13ddf485f5b3",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_api}}/sususcription/sue2dd6dc922d9f174d73d",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"sususcription",
+								"sue2dd6dc922d9f174d73d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar Datos de Transaccion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/sutransaction');\r",
+									"\r",
+									"const body = {\r",
+									"  \"suscription\": \"su40fa057ea592f9a24f77\",\r",
+									"  \"amount\": \"1000\",\r",
+									"  \"order\": \"001\",\r",
+									"  \"description\": \"Descripción\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"suscription\": \"{{suscription}}\",\r\n  \"amount\": \"{{amount}}\",\r\n  \"order\": \"{{order}}\",\r\n  \"description\": \"{{description}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/sutransaction",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"sutransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Suscripcion",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_api}}/sususcription/su09168ca9451fbee53c77",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"sususcription",
+								"su09168ca9451fbee53c77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Afiliar Tarjeta a Suscripcion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/suinscriptionscards');\r",
+									"\r",
+									"const body = {\r",
+									"  \"suscription\": \"su40fa057ea592f9a24f77\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"suscription\": \"{{suscription}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/suinscriptionscards",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suinscriptionscards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar Datos del Plan",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/suplan');\r",
+									"\r",
+									"const body = {\r",
+									"  \"name\": \"Test Plan\",\r",
+									"  \"description\": \"Test Plan\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"description\": \"{{description}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/suplan",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suplan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta Datos del Plan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/suplan/pl29161fefa865f2e3962e",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suplan",
+								"pl29161fefa865f2e3962e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta Todos los Planes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/suplan/plans",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suplan",
+								"plans"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Suscripcion de Consumo",
+			"item": [
+				{
+					"name": "Insertar Datos de Cliente",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/suclient');\r",
+									"\r",
+									"const body = {\r",
+									"    \"email\": \"supportex@website.cl\",\r",
+									"    \"name\": \"Subject\",\r",
+									"    \"phone\": \"923122312\",\r",
+									"    \"address\": \"Moneda 101\",\r",
+									"    \"country\": \"Chile\",\r",
+									"    \"region\": \"Metropolitana\",\r",
+									"    \"city\": \"Santiago\",\r",
+									"    \"postal_code\": \"850000\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"name\": \"{{name}}\",\r\n  \"phone\": \"{{phone}}\",\r\n  \"address\": \"{{address}}\",\r\n  \"country\": \"{{country}}\",\r\n  \"region\": \"{{region}}\",\r\n  \"city\": \"{{city}}\",\r\n  \"postal_code\": \"{{postal_code}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/suclient",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suclient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar Datos de Suscripcion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/sususcription');\r",
+									"\r",
+									"const body = {\r",
+									"  \"plan\": \"pl691f84b91e9bae905a05\",\r",
+									"  \"client\": \"cld6b4b9f7e24222a74f48\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"plan\": \"{{plan}}\",\r\n  \"client\": \"{{client}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/sususcription",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"sususcription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar Datos de Transaccion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/sutransaction');\r",
+									"\r",
+									"const body = {\r",
+									"  \"suscription\": \"su40fa057ea592f9a24f77\",\r",
+									"  \"amount\": \"10000\",\r",
+									"  \"order\": \"001\",\r",
+									"  \"description\": \"Descripción\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"suscription\": \"{{suscription}}\",\r\n  \"amount\": \"{{amount}}\",\r\n  \"order\": \"{{order}}\",\r\n  \"description\": \"{{description}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/sutransaction",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"sutransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar Datos del Plan",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"const requestPath = encodeURIComponent('/api/suplan');\r",
+									"\r",
+									"const body = {\r",
+									"  \"name\": \"Test Plan\",\r",
+									"  \"description\": \"Test Plan\"\r",
+									"};\r",
+									" \r",
+									" const orderedData = {};\r",
+									" Object.keys(body).sort().forEach(function(key) {\r",
+									"    pm.globals.set(key, body[key]);\r",
+									"    orderedData[key] = body[key];\r",
+									"  });\r",
+									"\r",
+									"   const arrayConcat = Object.entries(orderedData).map(\r",
+									"    ([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`\r",
+									"  ).join(\"&\");\r",
+									"\r",
+									"  const arrayChange = arrayConcat.replace(/%20/g, '+');\r",
+									"\r",
+									"  const concat = requestPath + \"&\" + arrayChange;\r",
+									"\r",
+									"  const sign = CryptoJS.HmacSHA256(concat, pm.environment.get(\"token_priv\")).toString();\r",
+									"\r",
+									"  pm.globals.set(\"firma\", sign);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Sign",
+								"value": "{{firma}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"description\": \"{{description}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/suplan",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"suplan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Evento",
+			"item": [
+				{
+					"name": "Crear un Evento",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.clear()\r",
+									"\r",
+									"const body = {\r",
+									"  \"event\": \"90375\",\r",
+									"  \"name\": \"Event\",\r",
+									"  \"date_event\": \"2021-04-20\",\r",
+									"  \"date_closing_sales\": \"2021-04-20 23:59:00\",\r",
+									"  \"date_payment\": \"2021-04-20\",\r",
+									"  \"url_event\": \"https://example.cl/event1\",\r",
+									"  \"url_logo\": \"https://example.cl/logo_event1.png\",\r",
+									"  \"service_sale\": 10,\r",
+									"  \"affiliaction\": [\r",
+									"    {\r",
+									"      \"email\": \"afiliate1@domain.com\",\r",
+									"      \"percent\": 50\r",
+									"    }\r",
+									"  ]\r",
+									"};\r",
+									" \r",
+									" const body_str = JSON.stringify(body);\r",
+									" pm.globals.set('body_data', body_str);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{{body_data}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/event",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Detalles del Evento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/event/90375",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"event",
+								"90375"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token_pub}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

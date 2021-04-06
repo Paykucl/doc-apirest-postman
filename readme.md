@@ -1,10 +1,10 @@
 # Postman Payku API Collection
 
 * [Introducción](#introducción)
-  * [Importar Archivos a la Aplicacion](#importar-archivos-a-la-aplicación)
-  * [Validar Autorizacion con Tokens](#validar-autorización-con-tokens-personales)
-  * [Modificar Datos para POST y PUT](#modificar-datos-para-post-y-put)
-  * [Modificar Datos Especificos GET y DEL](#modificar-datos-especificos-get-y-del)
+* [Importar Archivos a la Aplicacion](#importar-archivos-a-la-aplicación)
+* [Validar Autorizacion con Tokens](#validar-autorización-con-tokens-personales)
+* [Modificar Datos para POST y PUT](#modificar-datos-para-post-y-put)
+* [Modificar Datos Especificos GET y DEL](#modificar-datos-especificos-get-y-del)
 
 ------------
 

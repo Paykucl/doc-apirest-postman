@@ -35,7 +35,7 @@ Una vez realizado el proceso contará con los archivos JSON de la colección en 
 2. Nos ubicaremos en la parte izquierda de la aplicación haciendo click izquierdo en (**Enviroments**) y luego click izquierdo en el folder de (**Payku API**). Posterior a esto copiaremos los tokens en las variables prediseñadas, correspondiendo una al token público y una al token privado y daremos click izquierdo en (**Save**).
 ![](https://github.com/Paykucl/doc-apirest-postman/blob/master/img/imagen3.png?raw=true)
 
--Realizado este proceso la aplicación Postman rellenara de forma automática la autorización en todos los folders y request de la colección.
+Realizado este proceso la aplicación Postman rellenara de forma automática la autorización en todos los folders y request de la colección.
 
 ------------
 

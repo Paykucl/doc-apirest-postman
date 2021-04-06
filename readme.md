@@ -1,5 +1,11 @@
 ## -Postman Payku API Collection-
 
+[°Introduccion][#Introduccion]
+[°Importar Archivos a la Aplicacion][#Importar Archivos a la Aplicacion]
+[°Validar Autorizacion con Tokens][#Validar Autorizacion con Tokens]
+[°Modificar Datos para POST y PUT][#Modificar Datos para POST y PUT]
+[°Modificar Datos Especificos GET y DEL][#Modificar Datos Especificos GET y DEL]
+
 ------------
 
 #### Introducción.
@@ -10,7 +16,7 @@ Para obtener más información acerca de la documentación Payku puede ingresar 
 ------------
 
 #### Importar Archivos a la Aplicación.
-1. Descarga los archivos **JSON** de las colecciones Payku API. Puedes obtener esos archivos [{Aquí}](https://github.com/Paykucl/doc-apirest-postman/tree/master/collection).
+1. Descarga los archivos **JSON** de las colecciones Payku API. Puedes obtener esos archivos <a href="https://github.com/Paykucl/doc-apirest-postman/tree/master/collection" target="_blank">{Aquí}.</a>
 
 2. Una vez descargado los archivos, abra la aplicación Postman y diríjase a la pestaña (**Workspaces**) en la parte superior izquierda.
 ![](https://github.com/Paykucl/doc-apirest-postman/blob/master/img/imagen1.png?raw=true)

@@ -49,7 +49,7 @@ Realizado este proceso la aplicación Postman generara automáticamente la autor
 
 ------------
 
-## Modificar Datos Especificos GET y DEL.
+## Modificar Datos Especificos GET y DELETE.
 1. En este proceso ingresaremos en un request (**GET**) de obtención específica o (**DELETE**), luego cambiamos el (**Código ID**) valido para la solicitud que se desea obtener según el request seleccionado.
 2. Copie el (**ID**) valido de la solicitud requerida y luego se pegara en la barra url a partir del ( **/** ) como se muestra en el ejemplo 1 y 2. Finalmente haremos clic izquierdo en (**Save**) y posteriormente en (**Send**).
 ![](https://github.com/Paykucl/doc-apirest-postman/blob/master/img/imagen6.png?raw=true)

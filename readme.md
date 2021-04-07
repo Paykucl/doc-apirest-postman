@@ -1,5 +1,6 @@
 # Postman Payku API Collection
 
+## Tabla de Contenido
 * [Introducción](#introducción)
 * [Importar Archivos a la Aplicacion](#importar-archivos-a-la-aplicación)
 * [Validar Autorizacion con Tokens](#validar-autorización-con-tokens-personales)
@@ -11,7 +12,7 @@
 ## Introducción.
 En Payku te ofrecemos una colección en Postman la cual te permite trabajar a través de una extensión en el navegador o como aplicación desde tu sistema, para un uso rápido y fácil de nuestras API REST, ideal tanto para desarrolladores como usuarios.
 
-De igual forma proporcionamos un entorno personalizado, que se puede importar cómodamente para aplicar modificaciones y usarlo con sus claves secretas.
+De igual forma proporcionamos un entorno personalizado, que se puede importar cómodamente para aplicar modificaciones y usarlo con sus tokens publicos y privados.
 Para obtener más información acerca de la documentación Payku puede ingresar a <a href="https://docs.payku.cl/" target="_blank">Documentación</a>.
 
 ------------
@@ -32,7 +33,7 @@ Una vez realizado el proceso contará con los archivos JSON de la colección en 
 ## Validar Autorización con Tokens Personales.
 1. Una vez contamos con los tokens de integración creados en la plataforma Payku luego de su registro, procedemos a ingresar en el ambiente de la colección.
 
-2. Nos ubicaremos en la parte izquierda de la aplicación haciendo clic izquierdo en (**Enviroments**) y seleccionaremos la carpeta de (**Payku API**). A continuación reemplacé las variables token_pub y token_priv con los tokens público y privado respectivamente y haremos clic izquierdo en (**Save**).
+2. Nos ubicaremos en la parte izquierda de la aplicación haciendo clic izquierdo en (**Enviroments**), seleccionaremos la carpeta de (**Payku API**). A continuación reemplacé las variables token_pub y token_priv con los tokens público y privado respectivamente y haremos clic izquierdo en (**Save**).
 ![](https://github.com/Paykucl/doc-apirest-postman/blob/master/img/imagen3.png?raw=true)
 
 Realizado este proceso la aplicación Postman generara automáticamente la autorización en todos los folders y request de la colección.
@@ -56,3 +57,7 @@ Realizado este proceso la aplicación Postman generara automáticamente la autor
 ------------
 
 Para mayor información sobre la aplicación Postman también puede acceder a su documentación ingresando en <a href="https://learning.postman.com/docs/getting-started/introduction/" target="_blank">Doc Postman</a>.
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>

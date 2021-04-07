@@ -2,10 +2,10 @@
 
 ## Tabla de Contenido
 * [Introducción](#introducción)
-* [Importar Archivos a la Aplicacion](#importar-archivos-a-la-aplicación)
-* [Validar Autorizacion con Tokens](#validar-autorización-con-tokens-personales)
+* [Importar Archivos a la Aplicación](#importar-archivos-a-la-aplicación)
+* [Validar Autorización con Tokens](#validar-autorización-con-tokens-personales)
 * [Modificar Datos para POST y PUT](#modificar-datos-para-post-y-put)
-* [Modificar Datos Especificos GET y DEL](#modificar-datos-especificos-get-y-del)
+* [Modificar Datos Específicos GET y DEL](#modificar-datos-especificos-get-y-del)
 
 ------------
 

@@ -47,6 +47,9 @@ Realizado este proceso la aplicación Postman generara automáticamente la autor
 2. Una vez seleccionado el (**POST**) deseado hacemos clic izquierdo en (**Pre-request Script**) ubicado en la parte central de la aplicación y tendremos acceso al cuerpo modificable. Una vez modificado los datos hacemos clic izquierdo en (Save) y luego en (Send) para transmitir los datos.
 ![](https://github.com/Paykucl/doc-apirest-postman/blob/master/img/imagen5.png?raw=true)
 
+Cabe destacar que la estructura del cuerpo en el request debe regirse por los campos preestablecidos como se indica en la Documentación de Payku. En caso de realizar una modificación del cuerpo en los request POST de Suscripción, debe aplicarse el cambio tanto en (**Pre-request Script**) como en el (**Body**) tal como muestra el ejemplo de la imagen. Esto para que la firma de autorización coincida.
+![](https://github.com/Paykucl/doc-apirest-postman/blob/master/img/imagen7.png?raw=true)
+
 ------------
 
 ## Modificar Datos Especificos GET y DELETE.

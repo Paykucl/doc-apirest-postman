@@ -10,7 +10,7 @@
 ------------
 
 ## Introducción.
-En Payku te ofrecemos una colección en Postman la cual te permite trabajar a través de una extensión en el navegador o como aplicación desde tu sistema, para un uso rápido y fácil de nuestras API REST, ideal tanto para desarrolladores como usuarios.
+En Payku te ofrecemos una colección en Postman la cual te permite trabajar a través de una extensión en el navegador o como aplicación desde tu sistema, para uso rápido y fácil de nuestra API REST, ideal tanto para desarrolladores como usuarios.
 
 De igual forma proporcionamos un entorno personalizado, que se puede importar cómodamente para aplicar modificaciones y usarlo con sus tokens publicos y privados.
 Para obtener más información acerca de la documentación Payku puede ingresar a <a href="https://docs.payku.cl/" target="_blank">Documentación</a>.

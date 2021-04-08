@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2855dea4-ec55-40fc-80a6-e0b7a625a004",
+		"_postman_id": "3873619f-857a-40ea-8faa-08ddfdc50e82",
 		"name": "Payku API Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -59,7 +59,7 @@
 					"response": []
 				},
 				{
-					"name": "Obtener múltiples pagos",
+					"name": "Obtener múltiples transac",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -76,7 +76,7 @@
 					"response": []
 				},
 				{
-					"name": "Obtener pago",
+					"name": "Obtener transacción",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -342,6 +342,7 @@
 									"const body = {\r",
 									"    \"email\": \"supportex@website.cl\",\r",
 									"    \"name\": \"Subject\",\r",
+									"    \"rut\": \"123456789\",\r",
 									"    \"phone\": \"923122312\",\r",
 									"    \"address\": \"Moneda 101\",\r",
 									"    \"country\": \"Chile\",\r",
@@ -384,7 +385,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"name\": \"{{name}}\",\r\n  \"phone\": \"{{phone}}\",\r\n  \"address\": \"{{address}}\",\r\n  \"country\": \"{{country}}\",\r\n  \"region\": \"{{region}}\",\r\n  \"city\": \"{{city}}\",\r\n  \"postal_code\": \"{{postal_code}}\"\r\n}",
+							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"name\": \"{{name}}\",\r\n  \"rut\": \"{{rut}}\",\r\n  \"phone\": \"{{phone}}\",\r\n  \"address\": \"{{address}}\",\r\n  \"country\": \"{{country}}\",\r\n  \"region\": \"{{region}}\",\r\n  \"city\": \"{{city}}\",\r\n  \"postal_code\": \"{{postal_code}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -984,6 +985,7 @@
 									"const body = {\r",
 									"    \"email\": \"supportex@website.cl\",\r",
 									"    \"name\": \"Subject\",\r",
+									"    \"rut\": \"123456789\",\r",
 									"    \"phone\": \"923122312\",\r",
 									"    \"address\": \"Moneda 101\",\r",
 									"    \"country\": \"Chile\",\r",
@@ -1026,7 +1028,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"name\": \"{{name}}\",\r\n  \"phone\": \"{{phone}}\",\r\n  \"address\": \"{{address}}\",\r\n  \"country\": \"{{country}}\",\r\n  \"region\": \"{{region}}\",\r\n  \"city\": \"{{city}}\",\r\n  \"postal_code\": \"{{postal_code}}\"\r\n}",
+							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"name\": \"{{name}}\",\r\n  \"rut\": \"{{rut}}\",\r\n  \"phone\": \"{{phone}}\",\r\n  \"address\": \"{{address}}\",\r\n  \"country\": \"{{country}}\",\r\n  \"region\": \"{{region}}\",\r\n  \"city\": \"{{city}}\",\r\n  \"postal_code\": \"{{postal_code}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
